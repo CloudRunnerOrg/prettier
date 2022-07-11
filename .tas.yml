@@ -7,10 +7,16 @@ preRun:
      command:
         - yarn install --dev
 preMerge:
+  env:
+     FULL_TEST: true
+     PRETTIER_FALLBACK_RESOLVE: true
   pattern:
     - "./tests/integration/__tests__/*.js"
     - "./tests/format/**/*.spec.js"
 postMerge: 
+  env:
+     FULL_TEST: true
+     PRETTIER_FALLBACK_RESOLVE: true
   pattern: 
     - "./tests/integration/__tests__/*.js"
     - "./tests/format/**/*.spec.js"
