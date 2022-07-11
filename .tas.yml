@@ -1,6 +1,8 @@
 ---
 framework: jest
-tier: large
+tier: small
+parallelism: 4
+splitMode: file
 preRun:
      command:
         - yarn install --dev
